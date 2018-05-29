@@ -11,7 +11,7 @@ import { PrivateDealsComponent } from './private-deals/private-deals.component';
 import { CallbackComponent } from './callback.component';
 
 import { DealService } from './servicios/deal.service';
-
+import { AuthService } from './servicios/auth.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +24,10 @@ import { DealService } from './servicios/deal.service';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [DealService],
+  providers: [
+      DealService,
+      AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
